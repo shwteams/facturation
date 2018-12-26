@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88b8a214-5576-47a2-ab7d-c679f7925557" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="db_facturation: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="db_facturation: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_branche: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="db_facturation: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_client: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db_facturation@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="db_facturation: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="t_facture: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1024483807">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="34" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.33" value="3" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.opened" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="js" value="12" />
+          <entry key="php" value="63" />
+          <entry key="sql" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="JavaScript" value="12" />
+          <entry key="PHP" value="63" />
+          <entry key="Scratch" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="14" />
+          <entry key="dummy" value="6" />
+          <entry key="js" value="966" />
+          <entry key="php" value="6590" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="14" />
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="965" />
+          <entry key="PHP" value="6590" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/lib.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="889" column="30" selection-start-line="889" selection-start-column="21" selection-end-line="889" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-445">
+              <caret line="449" selection-start-line="447" selection-start-column="8" selection-end-line="449" />
+              <folding>
+                <element signature="e#155#183#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/parameters.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composant/com_pdf_entete/facture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2476">
+              <caret line="181" column="12" selection-start-line="65" selection-start-column="4" selection-end-line="181" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composant/com_pdf/facture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="98" column="112" selection-start-line="98" selection-start-column="98" selection-end-line="98" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="515" column="9" selection-start-line="515" selection-start-column="9" selection-end-line="515" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>$str_TYPE</find>
+      <find>number_to</find>
+      <find>$int_PRIME_TTC</find>
+      <find>int_PRIME_TTC</find>
+      <find>edit</find>
+      <find>phase</find>
+      <find>addBranche</find>
+      <find>addPhase</find>
+      <find>connexion</find>
+      <find>facture</find>
+      <find>nom</find>
+      <find>create</find>
+      <find>pri</find>
+      <find>modal</find>
+      <find>show</find>
+      <find>getLastFactureNumber</find>
+      <find>addClient</find>
+      <find>getIdClient</find>
+      <find>modal_add_data</find>
+      <find>modal_add_file</find>
+      <find>form_filter</find>
+      <find>printfAll</find>
+      <find>str_INTERMEDIAIRE_ID</find>
+      <find>printCourriers</find>
+      <find>printf</find>
+      <find>addFacture</find>
+      <find>switch</find>
+      <find>sansentete</find>
+      <find>str_NUMERO_POLICE</find>
+      <find>printfAllSansEntete</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lg_BRANCHE_ID</replace>
+      <replace>editBranche</replace>
+      <replace>Branche</replace>
+      <replace>str_NAME</replace>
+      <replace>$lg_CLIENT_ID</replace>
+      <replace>#str_LIBELLE</replace>
+      <replace>editClient</replace>
+      <replace>deleteClient</replace>
+      <replace>addBranche</replace>
+      <replace>lg_CLIENT_ID</replace>
+      <replace>getAllFacture</replace>
+      <replace>getAllClient</replace>
+      <replace>addFacture</replace>
+      <replace>$lg_FACTURE_ID</replace>
+      <replace>$int_ACCESSOIRE</replace>
+      <replace>int_ACCESSOIRE</replace>
+      <replace>modal_add_data</replace>
+      <replace>str_POLICE</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/composant/com_security/Security.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/services/css/site.css" />
+        <option value="$PROJECT_DIR$/footer-.php" />
+        <option value="$PROJECT_DIR$/composant/com_courrier/courrier.php" />
+        <option value="$PROJECT_DIR$/composant/com_courrier/facture.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/composant/com_phase/controlerPhase.php" />
+        <option value="$PROJECT_DIR$/menu-.php" />
+        <option value="$PROJECT_DIR$/services/center.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9503d3d0-5c85-4756-8aa5-c5fe3fd131db/console.sql" />
+        <option value="$PROJECT_DIR$/composant/com_phase/phase.js" />
+        <option value="$PROJECT_DIR$/composant/com_phase/phase.php" />
+        <option value="$PROJECT_DIR$/lib.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/lib.php" />
+        <option value="$PROJECT_DIR$/services/lib.class.php" />
+        <option value="$PROJECT_DIR$/composant/com_security/controlersecurity.php" />
+        <option value="$PROJECT_DIR$/composant/com_client/client.php" />
+        <option value="$PROJECT_DIR$/composant/com_client/controlerClient.php" />
+        <option value="$PROJECT_DIR$/composant/com_client/client.js" />
+        <option value="$PROJECT_DIR$/composant/com_facture/facture.php" />
+        <option value="$PROJECT_DIR$/composant/com_facture/controllerFacture.php" />
+        <option value="$PROJECT_DIR$/services/lib.php" />
+        <option value="$PROJECT_DIR$/composant/com_pdf_entete/facture.php" />
+        <option value="$PROJECT_DIR$/services/parameters.php" />
+        <option value="$PROJECT_DIR$/composant/com_facture/facture.js" />
+        <option value="$PROJECT_DIR$/printf.php" />
+        <option value="$PROJECT_DIR$/composant/com_pdf/facture.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facturation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facturation" type="462c0819:PsiDirectoryNode" />
+              <item name="composant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facturation" type="462c0819:PsiDirectoryNode" />
+              <item name="composant" type="462c0819:PsiDirectoryNode" />
+              <item name="com_facture" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="facturation" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88b8a214-5576-47a2-ab7d-c679f7925557" name="Default Changelist" comment="" />
+      <created>1543063176154</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543063176154</updated>
+      <workItem from="1543063195218" duration="8657000" />
+      <workItem from="1543219950004" duration="12138000" />
+      <workItem from="1543242487043" duration="9893000" />
+      <workItem from="1543305522453" duration="2217000" />
+      <workItem from="1543308101771" duration="12382000" />
+      <workItem from="1543321030475" duration="51000" />
+      <workItem from="1543329824626" duration="616000" />
+      <workItem from="1543333433191" duration="230000" />
+      <workItem from="1543333891014" duration="178000" />
+      <workItem from="1543334623230" duration="1945000" />
+      <workItem from="1543393695796" duration="612000" />
+      <workItem from="1543400881776" duration="829000" />
+      <workItem from="1543415172116" duration="619000" />
+      <workItem from="1543492156108" duration="580000" />
+      <workItem from="1543827541876" duration="12938000" />
+      <workItem from="1544029822191" duration="521000" />
+      <workItem from="1544031080625" duration="181000" />
+      <workItem from="1544031322252" duration="18000" />
+      <workItem from="1544049229028" duration="3676000" />
+      <workItem from="1544141472113" duration="3192000" />
+      <workItem from="1544172687202" duration="1000000" />
+      <workItem from="1544175205023" duration="664000" />
+      <workItem from="1544195329537" duration="329000" />
+      <workItem from="1544196329380" duration="3119000" />
+      <workItem from="1544279599042" duration="570000" />
+      <workItem from="1544292189987" duration="637000" />
+      <workItem from="1544431490844" duration="705000" />
+      <workItem from="1545035572369" duration="3345000" />
+      <workItem from="1545055135367" duration="609000" />
+      <workItem from="1545060561919" duration="599000" />
+      <workItem from="1545100366634" duration="46000" />
+      <workItem from="1545651644957" duration="3706000" />
+      <workItem from="1545656723926" duration="8677000" />
+      <workItem from="1545812826314" duration="12027000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="107506000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18389262" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.16644295" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/services/lib.php</url>
+          <line>1450</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/printf.php</url>
+          <line>307</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/composant/com_security/security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="154" column="49" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer-.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="124" selection-start-line="6" selection-start-column="124" selection-end-line="6" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="124" column="37" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu-.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="77" selection-start-line="93" selection-start-column="67" selection-end-line="93" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9503d3d0-5c85-4756-8aa5-c5fe3fd131db/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="360" selection-start-column="360" selection-end-column="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="392" column="9" selection-start-line="392" selection-start-column="9" selection-end-line="392" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/012d96f2-fe57-4c28-bf63-4705db47fbe0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/php_to_pdf/vendor/spipu/html2pdf/src/Html2Pdf.php" />
+    <entry file="file://$PROJECT_DIR$/lib.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/parameters.php" />
+    <entry file="file://$PROJECT_DIR$/composant/com_phase/phase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="37" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_phase/phase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_phase/controlerPhase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/lib.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4168">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/lib.php" />
+    <entry file="file://$PROJECT_DIR$/composant/com_security/controlersecurity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_security/login.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3434">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_client/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="64" selection-start-line="137" selection-start-column="64" selection-end-line="137" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_client/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="229" column="104" selection-start-line="229" selection-start-column="104" selection-end-line="229" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_client/controlerClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="98" column="112" selection-start-line="98" selection-start-column="98" selection-end-line="98" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="889" column="30" selection-start-line="889" selection-start-column="21" selection-end-line="889" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="515" column="9" selection-start-line="515" selection-start-column="9" selection-end-line="515" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-445">
+          <caret line="449" selection-start-line="447" selection-start-column="8" selection-end-line="449" />
+          <folding>
+            <element signature="e#155#183#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_pdf_entete/facture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2476">
+          <caret line="181" column="12" selection-start-line="65" selection-start-column="4" selection-end-line="181" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_pdf/facture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="46" column="101" selection-start-line="46" selection-start-column="101" selection-end-line="46" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#page_footer#0;n#page#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

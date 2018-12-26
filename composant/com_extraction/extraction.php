@@ -54,13 +54,22 @@ class Extraction {
                         </div>
                     </div>
                     <div class="m-portlet__body" ng-app="customerApp" ng-controller="customerController">
-                        <!--<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
-                            <div class="pull-right">
-                                <button type="button" class="btn btn-danger" id="modal_add_key" data-toggle="modal">
-                                    <i class="fa fa-plus"></i> Ajouter
-                                </button>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="pagination">
+                                    <li class="paginate_button page-item first" id="precedent">
+                                        <a  aria-controls="m_table_1" data-dt-idx="0" tabindex="0" class="page-link">
+                                            <i class="la la-angle-double-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="paginate_button page-item last" id="suivant">
+                                        <a  aria-controls="m_table_1" data-dt-idx="8" tabindex="0" class="page-link">
+                                            <i class="la la-angle-double-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>-->
+                        </div>
                         <table  class="table table-striped table-hover clo" id="list_courrier" >
                             <thead>
                             <tr>
@@ -91,22 +100,7 @@ class Extraction {
 
                             </tbody>
                         </table>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <ul class="pagination">
-                                    <li class="paginate_button page-item first" id="precedent">
-                                        <a  aria-controls="m_table_1" data-dt-idx="0" tabindex="0" class="page-link">
-                                            <i class="la la-angle-double-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="paginate_button page-item last" id="suivant">
-                                        <a  aria-controls="m_table_1" data-dt-idx="8" tabindex="0" class="page-link">
-                                            <i class="la la-angle-double-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

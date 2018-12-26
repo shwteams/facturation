@@ -58,7 +58,16 @@ if(!isset($_SESSION))
 							</span>
                                 </a>
                             </li>
-
+                            <li class="m-menu__item " aria-haspopup="true">
+                                <a class="m-menu__link m_link" id="showExtractFile" href="#">
+                                    <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="m-menu__link-text">
+								Extrait
+							</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -195,7 +204,16 @@ if(!isset($_SESSION))
 							</span>
                                 </a>
                             </li>
-
+                            <li class="m-menu__item " aria-haspopup="true">
+                                <a class="m-menu__link m_link" id="showExtractFile" href="#">
+                                    <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="m-menu__link-text">
+								Extrait
+							</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

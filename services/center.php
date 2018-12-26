@@ -8,6 +8,7 @@ include_once '../composant/com_user/user.php';
 include_once '../composant/com_phase/phase.php';
 include_once '../composant/com_facture/facture.php';
 include_once '../composant/com_client/client.php';
+include_once '../composant/com_extraction/extraction.php';
 
 
 if (isset($_GET["task"])) {

@@ -12,17 +12,44 @@ if (isset($_GET["task"])) {
         echo 'Error';
     } 
     else if ($task == "getAllExtraction"){
-        $str_PHASE_ID = "";
-        if(isset($_GET['str_EXTRACTION_ID']))
+        $str_EXTRACTION_ID = "";
+        if(isset($_GET['id']))
         {
-            $str_PHASE_ID = htmlentities($_GET['str_EXTRACTION_ID']);
+            $str_EXTRACTION_ID = htmlentities($_GET['id']);
+        }
+        if(isset($_GET['nbre']))
+        {
+            $nbre = htmlentities($_GET['nbre']);
+        }
+        if(isset($_GET['params']))
+        {
+            $params = htmlentities($_GET['params']);
+        }
+        if(isset($_GET['libelle']))
+        {
+            $libelle = htmlentities($_GET['libelle']);
         }
         $index = $_GET["index"];
-        getAllExtraction($str_EXTRACTION_ID, $db,$index);
+        getAllExtraction( $libelle, $params, $nbre, $str_EXTRACTION_ID, $db, $index);
     }
     else if ($task == "countData"){
-
-        countData($db);
+        if(isset($_GET['id']))
+        {
+            $str_EXTRACTION_ID = htmlentities($_GET['id']);
+        }
+        if(isset($_GET['nbre']))
+        {
+            $nbre = htmlentities($_GET['nbre']);
+        }
+        if(isset($_GET['params']))
+        {
+            $params = htmlentities($_GET['params']);
+        }
+        if(isset($_GET['libelle']))
+        {
+            $libelle = htmlentities($_GET['libelle']);
+        }
+        countData($db, $str_EXTRACTION_ID, $libelle, $nbre, $params);
     }
 
 }

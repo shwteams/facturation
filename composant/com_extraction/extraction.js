@@ -6,8 +6,6 @@ $(function () {
     let nombre_page=0;
     let nombre_element=0;
 
-
-
     let liste_courrier = [];
     // recuperation de la liste des courriers au format JSON
     function getData(index){
@@ -17,8 +15,6 @@ $(function () {
             addToListTagle(data);
         })
     }
-
-
 
     /// recuperation du nombre de page
     function countData(){
@@ -33,7 +29,6 @@ $(function () {
             })
         })
     }
-
 
     function addToListTagle(data){
         let d="";
@@ -55,7 +50,6 @@ $(function () {
     }
 
     countData();
-
 
     // precedent
     $("#precedent").click(function(){

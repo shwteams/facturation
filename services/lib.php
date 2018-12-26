@@ -1489,6 +1489,88 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $arrayJson["desc_statut"] = $db->errorInfo();
         echo "[" . json_encode($arrayJson) . "]";
     }
+    function getAllExtraction( $libelle, $params, $nbre, $str_EXTRACTION_ID, $db, $index){
+        $arrayJson = array();
+        $arraySql = array();
+        $code_statut = "0";
+        $str_STATUT = "delete";
+        $intResult = 0;
+
+        if ($str_EXTRACTION_ID == "" || $str_EXTRACTION_ID == null) {
+            $str_EXTRACTION_ID = "%%";
+        }
+        $str_EXTRACTION_ID = $db -> quote($str_EXTRACTION_ID);
+        if ($libelle == "" || $libelle == null) {
+            $libelle = "%%";
+        }
+        $libelle = $db -> quote('%'.$libelle.'%');
+        if ($nbre == "" || $nbre == null) {
+            $nbre = "%%";
+        }
+        $nbre = $db -> quote($nbre);
+        if ($params == "" || $params == null) {
+            $params = "%%";
+        }
+        $params = $db -> quote($params.'%');
+
+        $sql = "SELECT * FROM t_extraction "
+            . " WHERE str_EXTRACTION_ID LIKE " . $str_EXTRACTION_ID . " AND str_PARAM LIKE $libelle AND int_NUMBER_EXTRACT LIKE $nbre AND dt_CREATED LIKE $params AND str_STATUT <> '".$str_STATUT."'  "
+            . " ORDER BY dt_CREATED DESC LIMIT ".$index.",10;";
+        $stmt = $db -> query($sql);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $item_result) {
+            $arraySql[] = $item_result;
+            $intResult++;
+            $code_statut = "1";
+        }
+        $arrayJson["results"] = $arraySql;
+        $arrayJson["total"] = $intResult;
+        $arrayJson["desc_statut"] = $db->errorInfo();
+        $arrayJson["code_statut"] = $code_statut;
+        //echo "[" . json_encode($arrayJson) . "]";
+        echo  json_encode($arraySql) ;
+    }
+    function countData($db, $str_EXTRACTION_ID, $libelle, $nbre, $params){
+        $arrayJson = array();
+        $arraySql = array();
+        $code_statut = "0";
+        $str_STATUT = "delete";
+        $intResult = 0;
+
+        if ($str_EXTRACTION_ID == "" || $str_EXTRACTION_ID == null) {
+            $str_EXTRACTION_ID = "%%";
+        }
+        $str_EXTRACTION_ID = $db -> quote($str_EXTRACTION_ID);
+        if ($libelle == "" || $libelle == null) {
+            $libelle = "%%";
+        }
+        $libelle = $db -> quote('%'.$libelle.'%');
+        if ($nbre == "" || $nbre == null) {
+            $nbre = "%%";
+        }
+        $nbre = $db -> quote($nbre);
+        if ($params == "" || $params == null) {
+            $params = "%%";
+        }
+        $params = $db -> quote($params.'%');
+
+
+        $sql = "SELECT count(*) AS numberData FROM t_extraction "
+                ." WHERE str_EXTRACTION_ID LIKE " . $str_EXTRACTION_ID . " AND str_PARAM LIKE $libelle AND int_NUMBER_EXTRACT LIKE $nbre AND dt_CREATED LIKE $params AND str_STATUT <> '".$str_STATUT."'  ";
+        $stmt = $db -> query($sql);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $item_result) {
+            $arraySql[] = $item_result;
+            $intResult++;
+            $code_statut = "1";
+        }
+        $arrayJson["results"] = $arraySql;
+        $arrayJson["total"] = $intResult;
+        $arrayJson["desc_statut"] = $db->errorInfo();
+        $arrayJson["code_statut"] = $code_statut;
+
+        echo  json_encode($arraySql) ;
+    }
     function getAlphabetiqueWord(){
         $arrayJson = array();
         $arraySql = array();

@@ -13,14 +13,6 @@ if (isset($_GET["task"])) {
     else if($task == "getAlphabetiqueWord"){
         getAlphabetiqueWord();
     }
-    else if ($task == "getAllPhase"){
-        $str_ETAT_ID = "";
-        if(isset($_GET['str_PHASE_ID']))
-        {
-            $str_PHASE_ID= htmlentities($_GET['str_PHASE_ID']);
-        }
-        getAllPhase($str_PHASE_ID, $db);
-    }
     else if($task == "getAllClient"){
         $lg_CLIENT_ID = "";
         if(isset($_GET['lg_CLIENT_ID']))

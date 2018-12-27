@@ -1489,6 +1489,155 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $arrayJson["desc_statut"] = $db->errorInfo();
         echo "[" . json_encode($arrayJson) . "]";
     }
+
+    function getAllService($lg_SERVICE_ID, $db){
+        $arrayJson = array();
+        $arraySql = array();
+        $code_statut = "0";
+        $str_STATUT = "delete";
+        $intResult = 0;
+        if ($lg_SERVICE_ID == "" || $lg_SERVICE_ID == null) {
+            $lg_SERVICE_ID = "%%";
+        }
+        $lg_SERVICE_ID = $db -> quote($lg_SERVICE_ID);
+
+        $sql = "SELECT * FROM t_service "
+            . " WHERE lg_SERVICE_ID LIKE " . $lg_SERVICE_ID . " AND str_STATUT <> '".$str_STATUT."' "
+            . " ORDER BY dt_CREATED DESC;";
+        $stmt = $db -> query($sql);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $item_result) {
+            $arraySql[] = $item_result;
+            $intResult++;
+            $code_statut = "1";
+        }
+        $arrayJson["results"] = $arraySql;
+        $arrayJson["total"] = $intResult;
+        $arrayJson["desc_statut"] = $db->errorInfo();
+        $arrayJson["code_statut"] = $code_statut;
+        echo "[" . json_encode($arrayJson) . "]";
+    }
+    function isExistCodeService($lg_SERVICE_ID, $db) {
+        $str_STATUT = 'delete';
+        $lg_SERVICE_ID = $db->quote($lg_SERVICE_ID);
+        $sql = "SELECT * FROM t_service WHERE lg_SERVICE_ID LIKE " . $lg_SERVICE_ID . " AND str_STATUT <> '" . $str_STATUT . "'";
+        if(!empty($lg_SERVICE_ID)){
+            try {
+                $stmt = $db->query($sql);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                if (count($result) > 0) {
+                    return true;
+                }
+                return false;
+            } catch (PDOException $e) {
+                die("Erreur ! : " . $e->getMessage());
+                return false;
+            }
+        }
+        return false;
+    }
+    function addService($db, $str_LIBELLE) {
+
+        $message = "";
+        $code_statut = "";
+        $str_STATUT = "enable";
+        $lg_SERVICE_ID = RandomString();
+
+        $dt_CREATED = $db->quote(gmdate("Y-m-d, H:i:s"));
+        $sql = "INSERT INTO t_service(lg_SERVICE_ID, str_LIBELLE,  str_STATUT, dt_CREATED, str_CREATED_BY)"
+            . "VALUES (:lg_SERVICE_ID, :str_LIBELLE, :str_STATUT,$dt_CREATED,:str_CREATED_BY)";
+        try {
+            if (!isExistCodeService($lg_SERVICE_ID, $db)) {
+
+                $stmt = $db->prepare($sql);
+                $str_STATUT = "enable";
+                $stmt->BindParam(':lg_SERVICE_ID', $lg_SERVICE_ID);
+                $stmt->BindParam(':str_LIBELLE', $str_LIBELLE);
+                $stmt->BindParam(':str_STATUT', $str_STATUT);
+                $stmt->BindParam(':str_CREATED_BY', $_SESSION['str_SECURITY_ID']);
+                //var_dump($stmt);
+                if ($stmt->execute()) {
+                    $message = "Insertion effectué avec succès";
+                    $code_statut = "1";
+                } else {
+                    $message = "Erreur lors de l'insertion";
+                    $code_statut = "0";
+                }
+            } else {
+                $message = "Ce Code  : \" " . $lg_SERVICE_ID . " \" de table existe déja! \r\n";
+                $code_statut = "0";
+            }
+        } catch (PDOException $e) {
+            die("Erreur ! : " . $e->getMessage());
+        }
+        $arrayJson["results"] = $message;
+        $arrayJson["code_statut"] = $code_statut;
+        $arrayJson["desc_statut"] = $db->errorInfo();
+        echo "[" . json_encode($arrayJson) . "]";
+    }
+    function deleteService($lg_SERVICE_ID, $db) {
+        $arrayJson = array();
+        $message = "";
+        $code_statut = "";
+        $str_STATUT = "delete";
+        $lg_SERVICE_ID = $db->quote($lg_SERVICE_ID);
+        $str_UPDATED_BY = $db->quote($_SESSION['str_SECURITY_ID']);
+        $sql = "UPDATE t_service "
+            . "SET str_STATUT = '$str_STATUT',"
+            . "str_UPDATED_BY = $str_UPDATED_BY, "
+            . "dt_UPDATED = '" . gmdate("Y-m-d, H:i:s") . "' "
+            . "WHERE lg_SERVICE_ID = $lg_SERVICE_ID";
+        try {
+            $sucess = $db->exec($sql);
+            if ($sucess > 0) {
+                $message = "Suppression effectuée avec succès";
+                $code_statut = "1";
+            } else {
+                $message = "Erreur lors de la modification";
+                $code_statut = "0";
+            }
+        } catch (PDOException $e) {
+            die("Erreur ! : " . $e->getMessage());
+        }
+        $arrayJson["results"] = $message;
+        $arrayJson["total"] = $sucess;
+        $arrayJson["code_statut"] = $code_statut;
+        echo "[" . json_encode($arrayJson) . "]";
+    }
+    function editService($lg_SERVICE_ID, $str_LIBELLE, $db)
+    {
+        $arrayJson = array();
+        $message = "";
+        $code_statut = "";
+        //ECHO $str_ETAT_ID;
+        $str_LIBELLE = $db->quote($str_LIBELLE);
+        $lg_SERVICE_ID = $db->quote($lg_SERVICE_ID);
+        $sql = "UPDATE t_service "
+            . "SET str_LIBELLE = $str_LIBELLE, "
+            . "str_UPDATED_BY = '" . $_SESSION['str_SECURITY_ID'] . "',"
+            . "dt_UPDATED = '" . gmdate("Y-m-d, H:i:s") . "'"
+            . " WHERE lg_SERVICE_ID = $lg_SERVICE_ID";
+
+        try {
+            $sucess = $db->exec($sql);
+            if ($sucess > 0) {
+                $message = "Modification effectuée avec succès";
+                $code_statut = "1";
+            } else {
+                $message = "Erreur lors de la modification";
+                $code_statut = "0";
+            }
+        } catch (PDOException $e) {
+            die("Erreur ! : " . $e->getMessage());
+        }
+
+        $arrayJson["results"] = $message;
+        $arrayJson["total"] = $sucess;
+        $arrayJson["code_statut"] = $code_statut;
+        //    $arrayJson["desc_statut"] = $db->errorInfo();
+        echo "[" . json_encode($arrayJson) . "]";
+    }
+
     function getAllExtraction( $libelle, $params, $nbre, $str_EXTRACTION_ID, $db, $index){
         $arrayJson = array();
         $arraySql = array();
@@ -1713,4 +1862,5 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         }
         return $string;
     }
+
 ?>

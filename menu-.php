@@ -131,6 +131,16 @@ if(!isset($_SESSION))
                                 </a>
                             </li>
                             <li class="m-menu__item " aria-haspopup="true">
+                                <a id="showService" href="#" class="m-menu__link m_link">
+                                    <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="m-menu__link-text">
+								Service
+							</span>
+                                </a>
+                            </li>
+                            <li class="m-menu__item " aria-haspopup="true">
                                 <a id="showUser" href="#" class="m-menu__link m_link">
                                     <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                         <span></span>

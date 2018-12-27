@@ -9,6 +9,7 @@ include_once '../composant/com_phase/phase.php';
 include_once '../composant/com_facture/facture.php';
 include_once '../composant/com_client/client.php';
 include_once '../composant/com_extraction/extraction.php';
+include_once '../composant/com_service/service.php';
 
 
 if (isset($_GET["task"])) {
@@ -17,6 +18,9 @@ if (isset($_GET["task"])) {
 switch ($task) {
     case 'showClient':
         echo showClient();
+        break;
+    case 'showService':
+        echo showService();
         break;
     case 'showUser':
         echo showUser();
@@ -54,4 +58,7 @@ function showUser(){
 }
 function showClient(){
     Client::showAllClient();
+}
+function showService(){
+    Service::showAllService();
 }

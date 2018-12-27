@@ -992,334 +992,459 @@
     </table>
     <table id="255" parent="6" name="t_branche"/>
     <table id="256" parent="6" name="t_client"/>
-    <table id="257" parent="6" name="t_facture"/>
-    <table id="258" parent="6" name="t_security">
+    <table id="257" parent="6" name="t_extraction">
       <Collation>latin1_swedish_ci</Collation>
     </table>
-    <column id="259" parent="254" name="str_ACTIVITY_ID">
+    <table id="258" parent="6" name="t_facture"/>
+    <table id="259" parent="6" name="t_security">
+      <Collation>latin1_swedish_ci</Collation>
+    </table>
+    <table id="260" parent="6" name="t_service"/>
+    <column id="261" parent="254" name="str_ACTIVITY_ID">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="254" name="str_LOGIN">
+    <column id="262" parent="254" name="str_LOGIN">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="254" name="str_NOM">
+    <column id="263" parent="254" name="str_NOM">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="254" name="str_PRIV">
+    <column id="264" parent="254" name="str_PRIV">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="254" name="dt_CREATED">
+    <column id="265" parent="254" name="dt_CREATED">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="254" name="str_STATUT">
+    <column id="266" parent="254" name="str_STATUT">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="254" name="str_SECURITY_ID">
+    <column id="267" parent="254" name="str_SECURITY_ID">
       <Position>7</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="254" name="str_ADRESSE_IP">
+    <column id="268" parent="254" name="str_ADRESSE_IP">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="254" name="str_NAVIGATEUR">
+    <column id="269" parent="254" name="str_NAVIGATEUR">
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="254" name="str_PAYS">
+    <column id="270" parent="254" name="str_PAYS">
       <Position>10</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="269" parent="254" name="PRIMARY">
+    <key id="271" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>str_ACTIVITY_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="270" parent="255" name="lg_BRANCHE_ID">
+    <column id="272" parent="255" name="lg_BRANCHE_ID">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="255" name="str_LIBELLE">
+    <column id="273" parent="255" name="str_LIBELLE">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="255" name="str_STATUT">
+    <column id="274" parent="255" name="str_STATUT">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="255" name="str_CREATED_BY">
+    <column id="275" parent="255" name="str_CREATED_BY">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="255" name="dt_CREATED">
+    <column id="276" parent="255" name="dt_CREATED">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="255" name="str_UPDATED_BY">
+    <column id="277" parent="255" name="str_UPDATED_BY">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="255" name="dt_UPDATED">
+    <column id="278" parent="255" name="dt_UPDATED">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="277" parent="255" name="PRIMARY">
+    <key id="279" parent="255" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>lg_BRANCHE_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="278" parent="256" name="lg_CLIENT_ID">
+    <column id="280" parent="256" name="lg_CLIENT_ID">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="256" name="str_NAME">
+    <column id="281" parent="256" name="str_NAME">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="256" name="str_BP">
+    <column id="282" parent="256" name="str_BP">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="256" name="str_TEL">
+    <column id="283" parent="256" name="str_TEL">
       <Position>4</Position>
       <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="256" name="str_STATUT">
+    <column id="284" parent="256" name="str_STATUT">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="256" name="str_CREATED_BY">
+    <column id="285" parent="256" name="str_CREATED_BY">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="256" name="dt_CREATED">
+    <column id="286" parent="256" name="dt_CREATED">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="256" name="str_UPDATED_BY">
+    <column id="287" parent="256" name="str_UPDATED_BY">
       <Position>8</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="256" name="dt_UPDATED">
+    <column id="288" parent="256" name="dt_UPDATED">
       <Position>9</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="287" parent="256" name="PRIMARY">
+    <key id="289" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>lg_CLIENT_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="288" parent="257" name="lg_FACTURE_ID">
+    <column id="290" parent="257" name="str_EXTRACTION_ID">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="257" name="int_NUMFACT">
+    <column id="291" parent="257" name="str_FILE">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="257" name="str_PARAM">
+      <Position>3</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="257" name="int_NUMBER_EXTRACT">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="257" name="str_RAR">
+      <Position>5</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="257" name="str_STATUT">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="257" name="str_CREATED_BY">
+      <Position>7</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="257" name="dt_CREATED">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="257" name="lg_BRANCHE_ID">
+      <Position>9</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="257" name="pk_COURRIER_ID">
+      <Position>10</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="300" parent="257" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>str_EXTRACTION_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="258" name="lg_FACTURE_ID">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="258" name="int_NUMFACT">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="257" name="str_POLICE">
+    <column id="303" parent="258" name="str_POLICE">
       <Position>3</Position>
       <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="257" name="dt_DATE">
+    <column id="304" parent="258" name="dt_DATE">
       <Position>4</Position>
       <DataType>year(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="257" name="dt_EFFET">
+    <column id="305" parent="258" name="dt_EFFET">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="257" name="dt_ECHEANCE">
+    <column id="306" parent="258" name="dt_ECHEANCE">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="257" name="int_ACCESSOIRE">
+    <column id="307" parent="258" name="int_ACCESSOIRE">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="257" name="int_TAXE">
+    <column id="308" parent="258" name="int_TAXE">
       <Position>8</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="257" name="int_PRIME_NETTE">
+    <column id="309" parent="258" name="int_PRIME_NETTE">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="257" name="str_STATUT">
+    <column id="310" parent="258" name="str_STATUT">
       <Position>10</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="257" name="str_CREATED_BY">
+    <column id="311" parent="258" name="str_CREATED_BY">
       <Position>11</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="257" name="dt_CREATED">
+    <column id="312" parent="258" name="dt_CREATED">
       <Position>12</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="257" name="str_UPDATED_BY">
+    <column id="313" parent="258" name="str_UPDATED_BY">
       <Position>13</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="257" name="dt_UPDATED">
+    <column id="314" parent="258" name="dt_UPDATED">
       <Position>14</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="257" name="lg_CLIENT_ID">
+    <column id="315" parent="258" name="lg_CLIENT_ID">
       <Position>15</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="257" name="lg_BRANCHE_ID">
+    <column id="316" parent="258" name="lg_BRANCHE_ID">
       <Position>16</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="304" parent="257" name="fk_t_facture_t_client1_idx">
+    <index id="317" parent="258" name="fk_t_facture_t_client1_idx">
       <ColNames>lg_CLIENT_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="305" parent="257" name="fk_t_facture_t_branche1_idx">
+    <index id="318" parent="258" name="fk_t_facture_t_branche1_idx">
       <ColNames>lg_BRANCHE_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="257" name="PRIMARY">
+    <key id="319" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>lg_FACTURE_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="307" parent="257" name="fk_t_facture_t_client1">
+    <foreign-key id="320" parent="258" name="fk_t_facture_t_client1">
       <ColNames>lg_CLIENT_ID</ColNames>
       <RefSchemaName>db_facturation</RefSchemaName>
       <RefTableName>t_client</RefTableName>
       <RefColNames>lg_CLIENT_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="308" parent="257" name="fk_t_facture_t_branche1">
+    <foreign-key id="321" parent="258" name="fk_t_facture_t_branche1">
       <ColNames>lg_BRANCHE_ID</ColNames>
       <RefSchemaName>db_facturation</RefSchemaName>
       <RefTableName>t_branche</RefTableName>
       <RefColNames>lg_BRANCHE_ID</RefColNames>
     </foreign-key>
-    <column id="309" parent="258" name="str_SECURITY_ID">
+    <column id="322" parent="259" name="str_SECURITY_ID">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="258" name="str_LOGIN">
+    <column id="323" parent="259" name="str_LOGIN">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="258" name="str_PASSWORD">
+    <column id="324" parent="259" name="str_PASSWORD">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="258" name="str_NOM">
+    <column id="325" parent="259" name="str_NOM">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="258" name="str_PRENOM">
+    <column id="326" parent="259" name="str_PRENOM">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="258" name="str_EMAIL">
+    <column id="327" parent="259" name="str_EMAIL">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="258" name="str_PRIVILEGE">
+    <column id="328" parent="259" name="str_PRIVILEGE">
       <Position>7</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="258" name="str_STATUT">
+    <column id="329" parent="259" name="str_STATUT">
       <Position>8</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="258" name="str_CREATED_BY">
+    <column id="330" parent="259" name="str_CREATED_BY">
       <Position>9</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="258" name="dt_CREATED">
+    <column id="331" parent="259" name="dt_CREATED">
       <Position>10</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="258" name="str_UPDATED_BY">
+    <column id="332" parent="259" name="str_UPDATED_BY">
       <Position>11</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="258" name="dt_UPDATED">
+    <column id="333" parent="259" name="dt_UPDATED">
       <Position>12</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+    <column id="334" parent="259" name="lg_SERVICE_ID">
+      <Position>13</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="335" parent="259" name="lg_SERVICE_ID">
+      <ColNames>lg_SERVICE_ID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="336" parent="259" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>str_SECURITY_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="337" parent="260" name="lg_SERVICE_ID">
+      <Position>1</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="338" parent="260" name="str_LIBELLE">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="339" parent="260" name="str_STATUT">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="340" parent="260" name="str_CREATED_BY">
+      <Position>4</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="341" parent="260" name="dt_CREATED">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="260" name="str_UPDATED_BY">
+      <Position>6</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="260" name="dt_UPDATED">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="344" parent="260" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>lg_SERVICE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

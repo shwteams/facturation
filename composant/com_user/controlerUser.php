@@ -18,7 +18,15 @@ if (isset($_GET["task"])) {
             $str_SECURITY_ID = htmlentities($_GET['str_SECURITY_ID']);
         }
         getAllSecurity($str_SECURITY_ID, $db);
-    } 
+    }
+    else if ($task == "getAllService"){
+        $lg_SERVICE_ID = "";
+        if(isset($_GET['lg_SERVICE_ID']))
+        {
+            $lg_SERVICE_ID = htmlentities($_GET['lg_SERVICE_ID']);
+        }
+        getAllService($lg_SERVICE_ID, $db);
+    }
     else if ($task == "deleteSecurity"){
         $str_SECURITY_ID = $_GET["str_SECURITY_ID"];
         deleteSecurity($str_SECURITY_ID, $db);
@@ -33,8 +41,9 @@ else if (isset($_POST['addSecurity'])){
     $str_PASSWORD = trim($_POST['str_PASSWORD']);
     $str_PASSWORD_CONF = trim($_POST['str_PASSWORD_CONF']);
     $str_PRIVILEGE = htmlentities(trim($_POST['str_PRIVILEGE']));
+    $lg_SERVICE_ID = htmlentities(trim($_POST['lg_SERVICE_ID']));
     //echo $str_PRIVILEGE; exit();
-    addSecurity($str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF,$str_PRIVILEGE, $db);
+    addSecurity($str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF,$str_PRIVILEGE, $lg_SERVICE_ID, $db);
 } 
 else if (isset($_POST['editeSecurity'])) {
     $str_SECURITY_ID = htmlentities(trim($_POST['str_SECURITY_ID']));
@@ -45,5 +54,6 @@ else if (isset($_POST['editeSecurity'])) {
     $str_PASSWORD = trim($_POST['str_PASSWORD_EDIT']);
     $str_PASSWORD_CONF = trim($_POST['str_PASSWORD_CONF_EDIT']);
     $str_PRIVILEGE = htmlentities(trim($_POST['str_PRIVILEGE_EDIT']));
-    editSecurity($str_SECURITY_ID, $str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF, $str_PRIVILEGE, $db);
+    $lg_SERVICE_ID = htmlentities(trim($_POST['lg_SERVICE_ID']));
+    editSecurity($str_SECURITY_ID, $str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF, $str_PRIVILEGE, $lg_SERVICE_ID, $db);
 }

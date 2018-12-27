@@ -1,4 +1,4 @@
-var url = "composant/com_phase/controlerPhase.php";
+var url = "composant/com_service/controlerService.php";
 var datatable = "";
 $(function () {
     getAllService("");

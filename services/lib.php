@@ -190,8 +190,9 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         }
         $str_SECURITY_ID = $db -> quote($str_SECURITY_ID);
 
-        $sql = "SELECT * FROM t_security "
-                . " WHERE str_SECURITY_ID LIKE " . $str_SECURITY_ID . " AND str_STATUT <> '".$str_STATUT."' "
+        $sql = "SELECT t_security.*, t_service.lg_SERVICE_ID, t_service.str_LIBELLE FROM t_security "
+                . " JOIN t_service ON t_service.lg_SERVICE_ID = t_security.lg_SERVICE_ID "
+                . " WHERE str_SECURITY_ID LIKE " . $str_SECURITY_ID . " AND t_security.str_STATUT <> '".$str_STATUT."' "
                 . " ORDER BY dt_CREATED DESC;";
         $stmt = $db -> query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -249,7 +250,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         }
         return true;
     }
-    function addSecurity($str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF, $str_PRIVILEGE, $db) {
+    function addSecurity($str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF, $str_PRIVILEGE, $lg_SERVICE_ID, $db) {
         $arrayJson = array();
         $message = "";
         $code_statut = "";
@@ -261,8 +262,8 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                 $str_PASSWORD = generatePassword(ALGO, $str_PASSWORD);
                 //$str_PASSWORD = $db->quote($str_PASSWORD);
                 $dt_CREATED = $db->quote(gmdate("Y-m-d, H:i:s"));
-                $sql = "INSERT INTO t_security(str_SECURITY_ID, str_LOGIN, str_PASSWORD, str_NOM, str_PRENOM,str_EMAIL, str_PRIVILEGE, str_STATUT, dt_CREATED, str_CREATED_BY)"
-                    . "VALUES (:str_SECURITY_ID,:str_LOGIN,:str_PASSWORD,:str_NOM,:str_PRENOM,:str_EMAIL,:str_PRIVILEGE, :str_STATUT,$dt_CREATED,:str_CREATED_BY)";
+                $sql = "INSERT INTO t_security(str_SECURITY_ID, str_LOGIN, str_PASSWORD, str_NOM, str_PRENOM,str_EMAIL, str_PRIVILEGE, str_STATUT, dt_CREATED, str_CREATED_BY, lg_SERVICE_ID)"
+                    . "VALUES (:str_SECURITY_ID,:str_LOGIN,:str_PASSWORD,:str_NOM,:str_PRENOM,:str_EMAIL,:str_PRIVILEGE, :str_STATUT,$dt_CREATED,:str_CREATED_BY, :lg_SERVICE_ID)";
                 try {
                     if (!isExistCodeSecurity($str_SECURITY_ID, $db)) {
 
@@ -277,6 +278,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                         $stmt->BindParam(':str_PRIVILEGE', $str_PRIVILEGE);
                         $stmt->BindParam(':str_STATUT', $str_STATUT);
                         $stmt->BindParam(':str_CREATED_BY', $_SESSION['str_SECURITY_ID']);
+                        $stmt->BindParam(':lg_SERVICE_ID', $lg_SERVICE_ID);
                         //var_dump($stmt);
                         if ($stmt->execute()) {
                             $message = "Insertion effectué avec succès";
@@ -336,7 +338,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $arrayJson["code_statut"] = $code_statut;
         echo "[" . json_encode($arrayJson) . "]";
     }
-    function editSecurity($str_SECURITY_ID, $str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF,$str_PRIVILEGE, $db)
+    function editSecurity($str_SECURITY_ID, $str_NAME, $str_LASTNAME, $str_EMAIL, $str_LOGIN, $str_PASSWORD, $str_PASSWORD_CONF,$str_PRIVILEGE, $lg_SERVICE_ID, $db)
     {
         $arrayJson = array();
         $message = "";
@@ -347,6 +349,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
             $str_LASTNAME=$db->quote($str_LASTNAME);
             $str_LOGIN=$db->quote($str_LOGIN);
             $str_EMAIL=$db->quote($str_EMAIL);
+            $lg_SERVICE_ID=$db->quote($lg_SERVICE_ID);
             $str_PRIVILEGE=$db->quote($str_PRIVILEGE);
             if ($str_PASSWORD_CONF === $str_PASSWORD){
                 $str_PASSWORD = generatePassword(ALGO, $str_PASSWORD);
@@ -360,7 +363,8 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     . "str_EMAIL = $str_EMAIL,"
                     . "str_UPDATED_BY = '" . $_SESSION['str_SECURITY_ID'] . "',"
                     . "dt_UPDATED = '" . gmdate("Y-m-d, H:i:s") . "',"
-                    . "str_PRIVILEGE = $str_PRIVILEGE"
+                    . " str_PRIVILEGE = $str_PRIVILEGE, "
+                    . " lg_SERVICE_ID = $lg_SERVICE_ID"
                     . " WHERE str_SECURITY_ID = $str_SECURITY_ID";
 
                 try {

@@ -2,6 +2,7 @@ var url = "composant/com_user/controlerUser.php";
 var datatable = "";
 $(function () {
     getAllUser("");
+    getService("");
     $('#str_PASSWORD_CONF').focusout( function () {
         var str_PASSWORD = $('#str_PASSWORD').val();
         var str_PASSWORD_CONF = $('#str_PASSWORD_CONF').val();
@@ -46,7 +47,8 @@ $(function () {
         var str_PASSWORD = $('#modal_edit_key #str_PASSWORD_EDIT').val();
         var str_PASSWORD_CONF = $('#modal_edit_key #str_PASSWORD_CONF_EDIT').val();
         var str_PRIVILEGE = $('#modal_edit_key #str_PRIVILEGE_EDIT').val();
-        if (str_SECURITY_ID == "" || str_NAME == "" || str_LASTNAME == "" || str_EMAIL == "" || str_LOGIN == "" || str_PASSWORD == "" || str_PASSWORD_CONF =="" || str_PRIVILEGE == "") {
+        var lg_SERVICE_ID = $('#modal_edit_key #lg_SERVICE_ID').val();
+        if (str_SECURITY_ID == "" || str_NAME == "" || str_LASTNAME == "" || str_EMAIL == "" || str_LOGIN == "" || str_PASSWORD == "" || str_PASSWORD_CONF =="" || str_PRIVILEGE == "" || lg_SERVICE_ID == "") {
             swal({
                 title: "Echec",
                 text: "Veuillez remplir tous les champs",
@@ -55,7 +57,7 @@ $(function () {
             });
             return false;
         } else {
-            editSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE);
+            editSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE, lg_SERVICE_ID);
         }
 
     });
@@ -71,7 +73,8 @@ $(function () {
         var str_PASSWORD_CONF = $('#add_key_form #str_PASSWORD_CONF').val();
         var str_SECURITY_UP_ID = $('#add_key_form #str_SECURITY_UP_ID').val();
         var str_PRIVILEGE = $('#add_key_form #str_PRIVILEGE').val();
-        if (str_SECURITY_ID == "" || str_NAME == "" || str_LASTNAME == "" || str_EMAIL == "" || str_LOGIN == "" || str_PASSWORD == "" || str_PASSWORD_CONF =="" || str_SECURITY_UP_ID == "" || str_PRIVILEGE == "") {
+        var lg_SERVICE_ID = $('#add_key_form #lg_SERVICE_ID').val();
+        if (str_SECURITY_ID == "" || str_NAME == "" || str_LASTNAME == "" || str_EMAIL == "" || str_LOGIN == "" || str_PASSWORD == "" || str_PASSWORD_CONF =="" || str_SECURITY_UP_ID == "" || str_PRIVILEGE == "" || lg_SERVICE_ID == "") {
             swal({
                 title: "Echec",
                 text: "Veuillez remplir tous les champs",
@@ -81,7 +84,7 @@ $(function () {
             return false;
         } else {
             //console.log("add table")
-            addSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE);
+            addSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE, lg_SERVICE_ID);
         }
     });
 
@@ -95,6 +98,29 @@ $(function () {
     });
 });
 
+function getService(){
+    var task = "getAllService";
+    $.get(url+"?task="+task+"&lg_SERVICE_ID=", function(json, textStatus){
+        var obj = $.parseJSON(json);
+        if (obj[0].code_statut == "1")
+        {
+            var results = obj[0].results;
+
+            if (obj[0].results.length > 0)
+            {
+                $.each(results, function (i, value)//
+                {
+                    //console.log(results[i].lg_SERVICE_ID)
+                    let option = $('<option value="' + results[i].lg_SERVICE_ID + '">'+results[i].str_LIBELLE+'</tr>');
+                    let optionMd = $('<option value="' + results[i].lg_SERVICE_ID + '">'+results[i].str_LIBELLE+'</tr>');
+                    $('#modal_add_key #lg_SERVICE_ID').append(option);
+
+                    $('#modal_edit_key #lg_SERVICE_ID').append(optionMd);
+                });
+            }
+        }
+    });
+}
 
 function getAllUser(str_SECURITY_ID){
     var task = "getAllUser";
@@ -118,6 +144,7 @@ function getAllUser(str_SECURITY_ID){
                     var td_LASTNAME = $('<td class="column-data-table">' + results[i].str_PRENOM + '</td>');
                     var td_EMAIL = $('<td class="column-data-table">' + results[i].str_EMAIL + '</td>');
                     var td_PRIVILEGE = $('<td class="column-data-table">' + results[i].str_PRIVILEGE + '</td>');
+                    var td_LIBELLE = $('<td class="column-data-table">' + results[i].str_LIBELLE + '</td>');
                     var btn_edit = $('<span class=" btn-action-custom btn-action-edit" id="modal_edit_key" data-toggle="modal"  title="Modifier"><i class="fa fa-edit"></i> | </span> ').click(function () {
                         $('.modal[id="modal_edit_key"]').modal('show');
                         var id_key = $(this).parent().parent().attr('id');
@@ -167,6 +194,7 @@ function getAllUser(str_SECURITY_ID){
                     tr.append(td_LASTNAME);
                     tr.append(td_EMAIL);
                     tr.append(td_PRIVILEGE);
+                    tr.append(td_LIBELLE);
                     tr.append(td_action);
                     tr.append(td_rien);
                     $("#examples tbody").append(tr);
@@ -208,11 +236,11 @@ function getAllUser(str_SECURITY_ID){
 
     });
 }
-function addSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE) {
+function addSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE, lg_SERVICE_ID) {
     $.ajax({
         url: url, // La ressource ciblée
         type: 'POST', // Le type de la requête HTTP.
-        data: 'addSecurity=addSecurity&str_NAME=' + str_NAME + "&str_LASTNAME=" + str_LASTNAME + '&str_EMAIL=' +str_EMAIL+'&str_LOGIN='+str_LOGIN+'&str_PASSWORD='+str_PASSWORD+'&str_PASSWORD_CONF='+str_PASSWORD_CONF+'&str_PRIVILEGE='+str_PRIVILEGE,
+        data: 'addSecurity=addSecurity&str_NAME=' + str_NAME + "&str_LASTNAME=" + str_LASTNAME + '&str_EMAIL=' +str_EMAIL+'&str_LOGIN='+str_LOGIN+'&str_PASSWORD='+str_PASSWORD+'&str_PASSWORD_CONF='+str_PASSWORD_CONF+'&str_PRIVILEGE='+str_PRIVILEGE + '&lg_SERVICE_ID='+lg_SERVICE_ID,
         dataType: 'text',
         success: function (response) {
             var obj = $.parseJSON(response);
@@ -244,11 +272,11 @@ function addSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOG
         }
     });
 }
-function editSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE) {
+function editSecurity(str_SECURITY_ID, str_NAME, str_LASTNAME, str_EMAIL, str_LOGIN, str_PASSWORD, str_PASSWORD_CONF, str_PRIVILEGE, lg_SERVICE_ID) {
     $.ajax({
         url: url, // La ressource ciblée
         type: 'POST', // Le type de la requête HTTP.
-        data: 'editeSecurity=editeSecurity&str_NAME_EDIT=' + str_NAME + "&str_LASTNAME_EDIT=" + str_LASTNAME + '&str_EMAIL_EDIT=' +str_EMAIL+'&str_LOGIN_EDIT='+str_LOGIN+'&str_PASSWORD_EDIT='+str_PASSWORD+'&str_PASSWORD_CONF_EDIT='+str_PASSWORD_CONF+'&str_PRIVILEGE_EDIT='+str_PRIVILEGE+'&str_SECURITY_ID='+str_SECURITY_ID,
+        data: 'editeSecurity=editeSecurity&str_NAME_EDIT=' + str_NAME + "&str_LASTNAME_EDIT=" + str_LASTNAME + '&str_EMAIL_EDIT=' +str_EMAIL+'&str_LOGIN_EDIT='+str_LOGIN+'&str_PASSWORD_EDIT='+str_PASSWORD+'&str_PASSWORD_CONF_EDIT='+str_PASSWORD_CONF+'&str_PRIVILEGE_EDIT='+str_PRIVILEGE+'&str_SECURITY_ID='+str_SECURITY_ID+"&lg_SERVICE_ID="+lg_SERVICE_ID,
         dataType: 'text',
         success: function (response) {
             //alert(json);return;
@@ -335,6 +363,7 @@ function getKeyById(str_SECURITY_ID)
                     $('#modal_edit_key #str_LASTNAME_EDIT').val(results[i].str_PRENOM);
                     $('#modal_edit_key #str_EMAIL_EDIT').val(results[i].str_EMAIL);
                     $('#modal_edit_key #str_PRIVILEGE_EDIT').val(results[i].str_PRIVILEGE);
+                    $('#modal_edit_key #lg_SERVICE_ID').val(results[i].lg_SERVICE_ID);
                 });
             }
         }

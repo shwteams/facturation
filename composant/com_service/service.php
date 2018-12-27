@@ -48,7 +48,7 @@ class Service {
                         <div class="m-portlet__head-caption">
                             <div class="m-portlet__head-title">
                                 <h3 class="m-portlet__head-text">
-                                    Liste des branches
+                                    Liste des services
                                 </h3>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ class Service {
                                 <div class="form-group">
                                     <label for="str_LIBELLE" class="col-sm-12 control-label">Libelle <span class="require">*</span> :</label>
                                     <div class="col-sm-12">
-                                        <input class="form-control" id="str_LIBELLE" name="str_LIBELLE" placeholder="Branche" type="text" required="">
+                                        <input class="form-control" id="str_LIBELLE" name="str_LIBELLE" placeholder="Service" type="text" required="">
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@ class Service {
                                 <div class="form-group">
                                     <label for="str_LIBELLE_EDIT" class="col-sm-12 control-label">Libelle <span class="require">*</span> :</label>
                                     <div class="col-sm-12">
-                                        <input class="form-control" id="str_LIBELLE_EDIT" name="str_LIBELLE_EDIT" placeholder="Branche" type="text" required="">
+                                        <input class="form-control" id="str_LIBELLE_EDIT" name="str_LIBELLE_EDIT" placeholder="Service" type="text" required="">
                                     </div>
                                 </div>
                             </div>

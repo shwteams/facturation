@@ -69,6 +69,7 @@ class User {
 									<td>Prénoms</td>
 									<td>Emails</td>
 									<td>Types utilisateur</td>
+									<td>Services</td>
 									<td>Actions</td>
 									<td></td>
 								</tr>
@@ -139,6 +140,14 @@ class User {
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="lg_SERVICE_ID" class="col-sm-12 control-label">Service <span class="require">*</span> :</label>
+                                    <div class="col-sm-12">
+                                        <select name="lg_SERVICE_ID" id="lg_SERVICE_ID" class="" required="" style="width: 100% !important;" >
+                                            <option value="">Selectionner un service</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -203,6 +212,14 @@ class User {
                                             <option value="opt">Opérateur</option>
                                             <option value="dec">Décideur</option>
                                             <option value="admin">Administrateur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lg_SERVICE_ID" class="col-sm-12 control-label">Service <span class="require">*</span> :</label>
+                                    <div class="col-sm-12">
+                                        <select name="lg_SERVICE_ID" id="lg_SERVICE_ID" class="" required="" style="width: 100% !important;" >
+                                            <option value="">Selectionner un service</option>
                                         </select>
                                     </div>
                                 </div>

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88b8a214-5576-47a2-ab7d-c679f7925557" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/services/lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/lib.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/backup_db_facturation.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/backup_db_facturation.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printf.php" beforeDir="false" afterPath="$PROJECT_DIR$/printf.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +61,7 @@
     <session id="1024483807">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="37" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="1" />
@@ -66,6 +69,7 @@
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.33" value="3" />
@@ -83,7 +87,8 @@
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.75" value="1" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -94,9 +99,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="js" value="18" />
           <entry key="md" value="1" />
-          <entry key="php" value="77" />
+          <entry key="php" value="78" />
           <entry key="sql" value="3" />
         </counts>
       </usages-collector>
@@ -105,7 +111,8 @@
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="18" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="77" />
+          <entry key="PHP" value="78" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -113,8 +120,9 @@
         <counts>
           <entry key="css" value="14" />
           <entry key="dummy" value="6" />
+          <entry key="gitignore" value="14" />
           <entry key="js" value="1120" />
-          <entry key="php" value="7621" />
+          <entry key="php" value="7704" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -123,19 +131,19 @@
           <entry key="CSS" value="14" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1119" />
-          <entry key="PHP" value="7621" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PHP" value="7704" />
+          <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="633" column="64" selection-start-line="633" selection-start-column="64" selection-end-line="633" selection-end-column="64" />
+            <state relative-caret-position="10829">
+              <caret line="637" column="20" selection-start-line="637" selection-start-column="20" selection-end-line="637" selection-end-column="82" />
               <folding>
                 <element signature="n#getAllExtraction#0;n#!!top" />
                 <element signature="n#countData#0;n#!!top" />
@@ -147,9 +155,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4641">
+              <caret line="275" column="78" selection-start-line="275" selection-start-column="78" selection-end-line="275" selection-end-column="78" />
+              <folding>
+                <element signature="e#155#183#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header-.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="2176">
               <caret line="128" column="72" selection-start-line="128" selection-start-column="72" selection-end-line="128" selection-end-column="72" />
             </state>
           </provider>
@@ -158,8 +178,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="244" column="9" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
+            <state relative-caret-position="165">
+              <caret line="532" column="44" selection-start-line="532" selection-start-column="35" selection-end-line="532" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -167,7 +196,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="3961">
               <caret line="233" column="81" selection-start-line="233" selection-start-column="71" selection-end-line="233" selection-end-column="81" />
             </state>
           </provider>
@@ -176,7 +205,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="1173">
               <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
             </state>
           </provider>
@@ -275,7 +304,6 @@
         <option value="$PROJECT_DIR$/composant/com_pdf_entete/facture.php" />
         <option value="$PROJECT_DIR$/services/parameters.php" />
         <option value="$PROJECT_DIR$/composant/com_facture/facture.js" />
-        <option value="$PROJECT_DIR$/printf.php" />
         <option value="$PROJECT_DIR$/composant/com_pdf/facture.php" />
         <option value="$PROJECT_DIR$/composant/com_extraction/extraction.php" />
         <option value="$PROJECT_DIR$/composant/com_extraction/extraction.js" />
@@ -291,6 +319,8 @@
         <option value="$PROJECT_DIR$/composant/com_facture/controllerFacture.php" />
         <option value="$PROJECT_DIR$/header-.php" />
         <option value="$PROJECT_DIR$/services/lib.php" />
+        <option value="$PROJECT_DIR$/printf.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -314,6 +344,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,19 +360,12 @@
             <path>
               <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
               <item name="facturation" type="462c0819:PsiDirectoryNode" />
-              <item name="composant" type="462c0819:PsiDirectoryNode" />
-              <item name="com_facture" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="facturation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="facturation" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,18 +433,20 @@
       <workItem from="1545656723926" duration="8677000" />
       <workItem from="1545812826314" duration="12027000" />
       <workItem from="1545828856891" duration="5178000" />
-      <workItem from="1545903868662" duration="5929000" />
+      <workItem from="1545903868662" duration="6027000" />
+      <workItem from="1545912046630" duration="1055000" />
+      <workItem from="1545944563568" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118613000" />
+    <option name="totallyTimeSpent" value="119924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,7 +479,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/printf.php</url>
-          <line>307</line>
+          <line>311</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -597,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/printf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="449" selection-start-line="447" selection-start-column="8" selection-end-line="449" />
-          <folding>
-            <element signature="e#155#183#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composant/com_extraction/extraction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1445">
@@ -653,10 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="71" column="48" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
-          <folding>
-            <element signature="e#6984#7015#0#HTML" expanded="true" />
-            <element signature="e#12596#12627#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -695,44 +707,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="233" column="81" selection-start-line="233" selection-start-column="71" selection-end-line="233" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="244" column="9" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="128" column="72" selection-start-line="128" selection-start-column="72" selection-end-line="128" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="633" column="64" selection-start-line="633" selection-start-column="64" selection-end-line="633" selection-end-column="64" />
+        <state relative-caret-position="10829">
+          <caret line="637" column="20" selection-start-line="637" selection-start-column="20" selection-end-line="637" selection-end-column="82" />
           <folding>
             <element signature="n#getAllExtraction#0;n#!!top" />
             <element signature="n#countData#0;n#!!top" />
             <element signature="n#getAlphabetiqueWord#0;n#!!top" />
             <element signature="n#convert_number_to_words#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4641">
+          <caret line="275" column="78" selection-start-line="275" selection-start-column="78" selection-end-line="275" selection-end-column="78" />
+          <folding>
+            <element signature="e#155#183#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header-.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="128" column="72" selection-start-line="128" selection-start-column="72" selection-end-line="128" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3961">
+          <caret line="233" column="81" selection-start-line="233" selection-start-column="71" selection-end-line="233" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composant/com_facture/facture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="532" column="44" selection-start-line="532" selection-start-column="35" selection-end-line="532" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>

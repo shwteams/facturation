@@ -202,6 +202,7 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
     set_time_limit(0);
     $dt_UPDATED = $db->quote(gmdate("Y-m-d, H:i:s"));
     $str_UPDATED_BY = $db->quote($_SESSION['str_SECURITY_ID']);
+    $lg_SERVICE_ID = $db->quote($_SESSION['lg_SERVICE_ID']);
     //$str_POLICE = "";
     $cpt = 0;
     $file_name = $_SESSION['nom'].'-courriers-du-'.date("d-m-Y");
@@ -241,10 +242,11 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
         if ($str_DATE_FIN == "" || $str_DATE_FIN == null) {
             $str_DATE_FIN = "%%";
         }
-        $sql = "SELECT t_facture.*, str_NAME, str_LIBELLE, str_TEL, str_BP "
+        $sql = "SELECT t_facture.*, str_NAME, t_branche.str_LIBELLE, str_TEL, str_BP "
             ."FROM t_facture "
             ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
             ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+            ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
             ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE between $str_DATE_DEBUT AND $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
     }
     else{
@@ -254,10 +256,11 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
             }
             $str_DATE_DEBUT = $db->quote($str_DATE_DEBUT);
 
-            $sql = "SELECT t_facture.*, str_NAME, str_LIBELLE, str_TEL, str_BP "
+            $sql = "SELECT t_facture.*, str_NAME, t_branche.str_LIBELLE, str_TEL, str_BP "
                 ."FROM t_facture "
                 ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+                ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                 ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_DEBUT AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
         }
         else{
@@ -266,10 +269,11 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
             }
             $str_DATE_FIN = $db->quote($str_DATE_FIN);
 
-            $sql = "SELECT t_facture.*, str_NAME, str_LIBELLE, str_TEL, str_BP "
+            $sql = "SELECT t_facture.*, str_NAME, t_branche.str_LIBELLE, str_TEL, str_BP "
                 ."FROM t_facture "
                 ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+                ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                 ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
         }
     }

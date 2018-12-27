@@ -591,6 +591,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
 
         $str_BRANCHE_ID = $db->quote($str_BRANCHE_ID);
         $lg_CLIENT_ID = $db->quote($lg_CLIENT_ID);
+        $lg_SERVICE_ID = $db->quote($_SESSION['lg_SERVICE_ID']);
 
         if( ($str_DATE_DEBUT<>'' or $str_DATE_DEBUT<>null) and ($str_DATE_FIN<>'' or $str_DATE_FIN<> null)){
             $str_DATE_DEBUT = $db->quote($str_DATE_DEBUT);
@@ -605,6 +606,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                 ."FROM t_facture "
                 ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+                ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                 ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE between $str_DATE_DEBUT AND $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
 
         }
@@ -619,6 +621,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     ."FROM t_facture "
                     ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                     ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+                    ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                     ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_DEBUT AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
 
             }
@@ -628,10 +631,11 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                 }
                 $str_DATE_FIN = $db->quote($str_DATE_FIN);
 
-                $sql = "SELECT t_facture.*, str_NAME, str_LIBELLE "
+                $sql = "SELECT t_facture.*, str_NAME, t_branche.str_LIBELLE "
                     ."FROM t_facture "
                     ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                     ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
+                    ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                     ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
 
             }

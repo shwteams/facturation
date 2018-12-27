@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88b8a214-5576-47a2-ab7d-c679f7925557" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composant/com_facture/controllerFacture.php" beforeDir="false" afterPath="$PROJECT_DIR$/composant/com_facture/controllerFacture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/lib.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +114,7 @@
           <entry key="css" value="14" />
           <entry key="dummy" value="6" />
           <entry key="js" value="1120" />
-          <entry key="php" value="7551" />
+          <entry key="php" value="7621" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -125,7 +123,7 @@
           <entry key="CSS" value="14" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1119" />
-          <entry key="PHP" value="7551" />
+          <entry key="PHP" value="7621" />
           <entry key="PLAIN_TEXT" value="12" />
         </counts>
       </usages-collector>
@@ -136,8 +134,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/lib.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="1259" column="52" selection-start-line="1259" selection-start-column="52" selection-end-line="1259" selection-end-column="52" />
+            <state relative-caret-position="97">
+              <caret line="633" column="64" selection-start-line="633" selection-start-column="64" selection-end-line="633" selection-end-column="64" />
               <folding>
                 <element signature="n#getAllExtraction#0;n#!!top" />
                 <element signature="n#countData#0;n#!!top" />
@@ -178,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+            <state relative-caret-position="153">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -411,18 +409,18 @@
       <workItem from="1545656723926" duration="8677000" />
       <workItem from="1545812826314" duration="12027000" />
       <workItem from="1545828856891" duration="5178000" />
-      <workItem from="1545903868662" duration="5504000" />
+      <workItem from="1545903868662" duration="5929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118188000" />
+    <option name="totallyTimeSpent" value="118613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -435,7 +433,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -720,15 +718,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composant/com_facture/controllerFacture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+        <state relative-caret-position="153">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/lib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="1259" column="52" selection-start-line="1259" selection-start-column="52" selection-end-line="1259" selection-end-column="52" />
+        <state relative-caret-position="97">
+          <caret line="633" column="64" selection-start-line="633" selection-start-column="64" selection-end-line="633" selection-end-column="64" />
           <folding>
             <element signature="n#getAllExtraction#0;n#!!top" />
             <element signature="n#countData#0;n#!!top" />

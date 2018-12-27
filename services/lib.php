@@ -134,6 +134,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                 $_SESSION['str_SECURITY_ID'] = $item_result['str_SECURITY_ID'];
                 $_SESSION['str_PRIV_ID'] = $item_result['str_PRIVILEGE'];
                 $_SESSION['str_ADRESS_IP'] =  $str_ADRESSE_IP;
+                $_SESSION['lg_SERVICE_ID'] =  $item_result['lg_SERVICE_ID'];
                 $_SESSION['str_NAVIGATEUR'] = $str_DETAILS;
                 addActivity($db, "connexion");
             }
@@ -1254,11 +1255,14 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
             return false;
         }
     }
-    function getLastFactureNumber($lg_BRANCHE_ID, $db) {
+    function getLastFactureNumber($lg_SERVICE_ID, $db) {
         $str_STATUT = 'delete';
-        $lg_BRANCHE_ID = $db->quote($lg_BRANCHE_ID);
+        $lg_SERVICE_ID = $db->quote($lg_SERVICE_ID);
         //$sql = "SELECT MAX(int_NUMFACT) as int_NUMFACT FROM t_facture WHERE str_STATUT <> '" . $str_STATUT . "' AND lg_BRANCHE_ID LIKE $lg_BRANCHE_ID";
-        $sql = "SELECT MAX(int_NUMFACT) as int_NUMFACT FROM t_facture WHERE str_STATUT <> '" . $str_STATUT . "' ";
+        $sql = "SELECT MAX(int_NUMFACT) as int_NUMFACT FROM t_facture "
+                ." JOIN t_security ON t_security.str_SECURITY_ID = t_facture.str_CREATED_BY "
+                ." JOIN t_service ON t_service.lg_SERVICE_ID = t_security.lg_SERVICE_ID "
+                ." WHERE t_service.lg_SERVICE_ID  LIKE $lg_SERVICE_ID AND t_facture.str_STATUT <> '" . $str_STATUT . "' ";
 
         try {
             $stmt = $db->query($sql);
@@ -1302,7 +1306,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $dt_CREATED = $db->quote(gmdate("Y-m-d, H:i:s"));
         $sql = "INSERT INTO t_facture(lg_FACTURE_ID, int_NUMFACT, str_POLICE, dt_DATE, dt_EFFET, dt_ECHEANCE, int_ACCESSOIRE, int_TAXE, int_PRIME_NETTE,  str_STATUT, str_CREATED_BY, dt_CREATED, lg_CLIENT_ID, lg_BRANCHE_ID) "
             . "VALUES (:lg_FACTURE_ID, :int_NUMFACT, :str_POLICE, :dt_DATE, :dt_EFFET, :dt_ECHEANCE, :int_ACCESSOIRE, :int_TAXE, :int_PRIME_NETTE, :str_STATUT, :str_CREATED_BY, $dt_CREATED, :lg_CLIENT_ID, :lg_BRANCHE_ID )";
-        $int_NUMFACT = getLastFactureNumber($lg_BRANCHE_ID, $db);
+        $int_NUMFACT = getLastFactureNumber($_SESSION['lg_SERVICE_ID'], $db);
         //exit();
         try {
             if (!isExistCodeFacture($lg_FACTURE_ID, $db)) {
@@ -1427,7 +1431,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                             $str_CLIENT_ID = getIdClient($str_CLIENT_FILES, $str_BP_FILES, $str_TEL_FILES, $db);
                             $str_BRANCHE_IDS = getIdBranche($str_BRANCHE_FILES, $db);
 
-                            $int_NUMFACT = getLastFactureNumber($str_BRANCHE_IDS, $db);
+                            $int_NUMFACT = getLastFactureNumber($_SESSION['lg_SERVICE_ID'], $db);
 
                             if (!empty($str_FACTURE_ID)) {
                                 try {

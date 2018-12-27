@@ -81,7 +81,7 @@ else if (isset($_POST['addFacture'])) {
     $int_TAXE = htmlentities(trim($_POST['int_TAXE']));
     $int_PRIME_NETTE = htmlentities(trim($_POST['int_PRIME_NETTE']));
     $str_BRANCHE_ID =  htmlentities(trim($_POST['str_BRANCHE_ID']));
-    $lg_CLIENT_ID = htmlentities(trim($_POST['lg_CLIEaddFactureNT_ID']));
+    $lg_CLIENT_ID = htmlentities(trim($_POST['lg_CLIENT_ID']));
     /*
     $str_BP = htmlentities(trim($_POST['str_BP']));
     $str_TEL = htmlentities(trim($_POST['str_TEL']));*/

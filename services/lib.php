@@ -3,8 +3,8 @@
 CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
 */
     error_reporting(E_ALL ^ E_DEPRECATED);
-    ini_set('display_errors', FALSE);
-    ini_set('display_startup_errors', FALSE);
+    ini_set('display_errors', TRUE);
+    ini_set('display_startup_errors', TRUE);
     //ini_set('session.gc_maxlifetime', 36000);
     //header('Access-Control-Allow-Origin: * '); a decommenter lorsque je vais la coupler avec une appli mobile
     //include 'SMSManager.php';

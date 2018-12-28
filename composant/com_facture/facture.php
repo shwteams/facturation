@@ -162,7 +162,7 @@ class Facture{
                                     <td>dates effets</td>
                                     <td>date échéances</td>
                                     <td>N° police</td>
-                                    <td>Prime TTC</td>
+                                    <td>Accessoire</td>
                                     <td>Taxes</td>
                                     <td>Prime nettes</td>
                                     <td>Actions</td>

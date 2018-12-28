@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88b8a214-5576-47a2-ab7d-c679f7925557" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composant/com_facture/documents/61b5da0da02e010b16bed1381d3b234f93198624-2018-12-28-2-rytjykhjuyj.err" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composant/com_facture/documents/61b5da0da02e010b16bed1381d3b234f93198624-2018-12-28-2-rytjykhjuyj.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composant/com_facture/documents/61b5da0da02e010b16bed1381d3b234f93198624.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courriers_avec2018/moroko_jean/26-12-2018/0_Transport_aérien/DETOH_KOUASSI_P-C_MBAHIA-250441.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/lib.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/printf.php" beforeDir="false" afterPath="$PROJECT_DIR$/printf.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +100,7 @@
           <entry key="gitignore" value="1" />
           <entry key="js" value="18" />
           <entry key="md" value="1" />
-          <entry key="php" value="79" />
+          <entry key="php" value="80" />
           <entry key="sql" value="3" />
         </counts>
       </usages-collector>
@@ -116,7 +109,7 @@
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="18" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="79" />
+          <entry key="PHP" value="80" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="3" />
         </counts>
@@ -127,7 +120,7 @@
           <entry key="dummy" value="6" />
           <entry key="gitignore" value="15" />
           <entry key="js" value="1120" />
-          <entry key="php" value="8098" />
+          <entry key="php" value="8100" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
@@ -136,7 +129,7 @@
           <entry key="CSS" value="14" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1119" />
-          <entry key="PHP" value="8098" />
+          <entry key="PHP" value="8100" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -171,11 +164,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/printf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1037">
+              <caret line="282" column="6" selection-start-line="282" selection-start-column="6" selection-end-line="282" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -306,8 +308,8 @@
         <option value="$PROJECT_DIR$/composant/com_facture/controllerFacture.php" />
         <option value="$PROJECT_DIR$/header-.php" />
         <option value="$PROJECT_DIR$/services/lib.php" />
-        <option value="$PROJECT_DIR$/printf.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/printf.php" />
       </list>
     </option>
   </component>
@@ -436,18 +438,18 @@
       <workItem from="1545912046630" duration="1055000" />
       <workItem from="1545944563568" duration="316000" />
       <workItem from="1545993554900" duration="2089000" />
-      <workItem from="1546001448639" duration="2944000" />
+      <workItem from="1546001448639" duration="3624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125115000" />
+    <option name="totallyTimeSpent" value="125795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,7 +462,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -731,16 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/printf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="254" column="67" selection-start-line="254" selection-start-column="67" selection-end-line="254" selection-end-column="67" />
-          <folding>
-            <element signature="e#155#183#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composant/com_pdf_entete/facture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -752,6 +744,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1037">
+          <caret line="282" column="6" selection-start-line="282" selection-start-column="6" selection-end-line="282" selection-end-column="6" />
         </state>
       </provider>
     </entry>

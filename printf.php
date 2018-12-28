@@ -280,7 +280,7 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
                 ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID AND t_service.lg_SERVICE_ID LIKE $lg_SERVICE_ID";
         }
     }
-    echo $sql;
+    //echo $sql;
     $stmt = $db->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

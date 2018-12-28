@@ -3,8 +3,8 @@
 CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
 */
     error_reporting(E_ALL ^ E_DEPRECATED);
-    ini_set('display_errors', true);
-    ini_set('display_startup_errors', true);
+    ini_set('display_errors', FALSE);
+    ini_set('display_startup_errors', FALSE);
     //ini_set('session.gc_maxlifetime', 36000);
     //header('Access-Control-Allow-Origin: * '); a decommenter lorsque je vais la coupler avec une appli mobile
     //include 'SMSManager.php';
@@ -608,7 +608,6 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
                 ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                 ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE between $str_DATE_DEBUT AND $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
-
         }
         else{
             if($str_DATE_DEBUT<>''){
@@ -623,7 +622,6 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
                     ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                     ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_DEBUT AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
-
             }
             else{
                 if ($str_DATE_FIN == "" || $str_DATE_FIN == null) {
@@ -637,7 +635,6 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
                     ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
                     ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND str_POLICE LIKE $str_POLICE  ";
-
             }
         }
         //echo $sql;
@@ -655,8 +652,6 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $arrayJson["code_statut"] = $code_statut;
         echo "[" . json_encode($arrayJson) . "]";
     }
-
-
     function getIdPhase($str_PHASE_ID, $db){
         $str_STATUT = 'delete';
         $str_PHASE_ID = $db->quote($str_PHASE_ID);
@@ -715,13 +710,16 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
         $str_BP = $db->quote($str_BP);
         $str_TEL = $db->quote($str_TEL);
 
-        $sql = "SELECT * FROM t_client WHERE str_NAME LIKE " . $str_NAME . " AND str_STATUT <> '" . $str_STATUT . "'";
-
-        if(!empty($str_BP) && !empty($str_TEL))
+        if($str_BP == "''" OR $str_TEL == "''")
+        {
+            $sql = "SELECT * FROM t_client WHERE str_NAME LIKE " . $str_NAME . " AND str_STATUT <> '" . $str_STATUT . "'";
+        }
+        else
+        {
             $sql = "SELECT * FROM t_client WHERE str_BP LIKE " . $str_BP . " AND str_TEL LIKE " . $str_TEL . " AND str_STATUT <> '" . $str_STATUT . "'";
+        }
 
-
-
+        //echo $sql;
         if(!empty($str_NAME)){
             try {
                 $stmt = $db->query($sql);
@@ -915,6 +913,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     $stmt = $db->prepare($sql);
                     $str_STATUT = "enable";
                     $int_COURRIER_ID = str_replace("'", " ", $int_COURRIER_ID);
+                    var_dump($int_COURRIER_ID);
                     $stmt->BindParam(':str_EXTRACTION_ID', $str_EXTRACTION_ID);
                     $stmt->BindParam(':str_FILE', $str_FILE);
                     $stmt->BindParam(':str_PARAM', $str_PARAM);
@@ -1431,7 +1430,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                             ." VALUES (:lg_FACTURE_ID, :int_NUMFACT, :str_POLICE, :dt_DATE, :dt_EFFET, :dt_ECHEANCE, :int_ACCESSOIRE, :int_TAXE, :int_PRIME_NETTE, :str_STATUT, :str_CREATED_BY, $dt_CREATED, :lg_CLIENT_ID, :lg_BRANCHE_ID);";
 
                         if($i>0) {
-
+                            //echo $str_CLIENT_FILES.'<br/>';
                             $str_CLIENT_ID = getIdClient($str_CLIENT_FILES, $str_BP_FILES, $str_TEL_FILES, $db);
                             $str_BRANCHE_IDS = getIdBranche($str_BRANCHE_FILES, $db);
 

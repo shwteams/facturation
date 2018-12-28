@@ -246,8 +246,9 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
             ."FROM t_facture "
             ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
             ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
-            ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
-            ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE between $str_DATE_DEBUT AND $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
+            . "JOIN t_security ON t_client.str_CREATED_BY = t_security.str_SECURITY_ID "
+            ."JOIN t_service ON t_service.lg_SERVICE_ID = t_security.lg_SERVICE_ID "
+            ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE between $str_DATE_DEBUT AND $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID  AND lg_FACTURE_ID LIKE $lg_FACTURE_ID AND t_service.lg_SERVICE_ID LIKE $lg_SERVICE_ID";
     }
     else{
         if($str_DATE_DEBUT<>''){
@@ -260,8 +261,9 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
                 ."FROM t_facture "
                 ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
-                ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
-                ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_DEBUT AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
+                . "JOIN t_security ON t_client.str_CREATED_BY = t_security.str_SECURITY_ID "
+                ."JOIN t_service ON t_service.lg_SERVICE_ID = t_security.lg_SERVICE_ID "
+                ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_DEBUT AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID AND t_service.lg_SERVICE_ID LIKE $lg_SERVICE_ID";
         }
         else{
             if ($str_DATE_FIN == "" || $str_DATE_FIN == null) {
@@ -273,11 +275,12 @@ function printCourriersAll($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_
                 ."FROM t_facture "
                 ."JOIN t_branche ON t_branche.lg_BRANCHE_ID = t_facture.lg_BRANCHE_ID "
                 ."JOIN t_client ON t_client.lg_CLIENT_ID = t_facture.lg_CLIENT_ID "
-                ."JOIN t_service ON t_service.lg_SERVICE_ID = $lg_SERVICE_ID "
-                ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID ";
+                . "JOIN t_security ON t_client.str_CREATED_BY = t_security.str_SECURITY_ID "
+                ."JOIN t_service ON t_service.lg_SERVICE_ID = t_security.lg_SERVICE_ID "
+                ."WHERE t_facture.lg_BRANCHE_ID LIKE $str_BRANCHE_ID AND dt_ECHEANCE LIKE $str_DATE_FIN AND t_facture.lg_CLIENT_ID LIKE $lg_CLIENT_ID AND lg_FACTURE_ID LIKE $lg_FACTURE_ID AND t_service.lg_SERVICE_ID LIKE $lg_SERVICE_ID";
         }
     }
-    //echo $sql;
+    echo $sql;
     $stmt = $db->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

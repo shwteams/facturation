@@ -913,7 +913,7 @@ CONTIENT TOUTES LES FONCTIONS DE MON APPLICATIONS
                     $stmt = $db->prepare($sql);
                     $str_STATUT = "enable";
                     $int_COURRIER_ID = str_replace("'", " ", $int_COURRIER_ID);
-                    var_dump($int_COURRIER_ID);
+                    //var_dump($int_COURRIER_ID);
                     $stmt->BindParam(':str_EXTRACTION_ID', $str_EXTRACTION_ID);
                     $stmt->BindParam(':str_FILE', $str_FILE);
                     $stmt->BindParam(':str_PARAM', $str_PARAM);

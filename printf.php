@@ -149,6 +149,7 @@ function printCourriers($lg_FACTURE_ID, $lg_CLIENT_ID, $str_BRANCHE_ID, $str_DAT
         $cli = str_replace("?", "", $cli);
 
         $link_file = $cli.'-'.$item_result['str_POLICE'] . '.pdf';
+
         //if($item_result['str_INTERMEDIAIRE_ID'] == 'j80zs5b9f806d96cae') echo $link_file;
         $str_EXTRACTION_ID = addHash($structure . $link_file, $item_result['str_LIBELLE'], $item_result['str_NAME'], $file_name . '.zip', $item_result['lg_BRANCHE_ID'], $item_result['lg_FACTURE_ID'], $item_result['str_POLICE'], $item_result['dt_EFFET'].' - '.$item_result['dt_ECHEANCE'], $item_result['int_ACCESSOIRE'], $db);
 
